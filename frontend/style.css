@@ -1,0 +1,151 @@
+/*поле игры*/
+.Field{
+    position: absolute;
+    left: calc(50% - 111px);
+    top: calc(50% - 250px);
+}
+.line-vertical {
+    width: 16px;
+    height: 222px;
+    position: absolute;
+    background-color: red;
+}
+.line2 {
+    position: absolute;
+    left: 64px;
+}
+.line1 {
+    position: absolute;
+    left: 128px;
+}
+.line-horizontal {
+    width: 222px;
+    height: 16px;
+    position: absolute;
+    background-color: red;
+}
+.line3{
+    position: absolute;
+    top: 64px;
+}
+.line4{
+    position: absolute;
+    top: 128px;
+}
+/*----------------------------------объекты игры*/
+/*--------------------крестик--------------*/
+.OTN {
+    position: relative;
+}
+.X:before, .X:after {
+    background-color: red;
+    position: absolute;
+    content: '';
+    left: 8px;
+    top: -6px;
+    height: 33px;
+    width: 2px;
+}
+.X:before{
+    transform: rotate(45deg);
+}
+.X:after {
+    transform: rotate(-45deg);
+}
+/*-----------------------точка---------------*/
+.XO {
+    background-color: black;
+    height: 32px;
+    width: 32px;
+    border-radius: 15px;
+    position: absolute;
+}
+/*--------------------------нолик--------------------*/
+.O {
+    position: absolute;
+    border: red solid 5px;
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+}
+.XO1{
+    top: 24px;
+    left: 23px;
+}
+.XO2 {
+    top: 24px;
+    left: 93px;
+}
+.XO3 {
+    top: 24px;
+    left: 163px;
+}
+.XO4 {
+    top: 94px;
+    left: 23px;
+}
+.XO5 {
+    top: 94px;
+    left: 93px;
+}
+.XO6 {
+    top: 94px;
+    left: 163px;
+}
+.XO7 {
+    top: 164px;
+    left: 24px;
+}
+.XO7 {
+    top: 164px;
+    left: 23px;
+}
+.XO8 {
+    top: 164px;
+    left: 93px;
+}
+.XO9 {
+    top: 164px;
+    left: 163px;
+}
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+}
+.popup.open {
+    opacity: 1;
+    visibility:visible;
+}
+.popup-body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+.popup-content {
+    background-color: white;
+    color: black;
+    max-width: 800px;
+    padding: 30px;
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+}
+.popup-content.open {
+    opacity: 1;
+}
+.popup-title1, .popup-title2, .popup-title3 {
+    display: none;
+    font-size: 40px;
+    margin: 0 0 1em 0;
+}
+.popup-title1.open, .popup-title2.open, .popup-title3.open {
+    display: inline;
+}
